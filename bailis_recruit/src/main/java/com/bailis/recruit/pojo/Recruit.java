@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * tb_recruit
+ * tb_recruit 推荐岗位表
  * @author zhulang
  */
 @Table(name="tb_recruit")

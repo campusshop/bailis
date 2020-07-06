@@ -22,7 +22,7 @@ public class RecruitService {
     private IdWorker idWorker;
 
     /**
-     * 查询全部招聘岗位
+     * 查询全部推荐岗位
      *
      * @return Recruits
      */
@@ -31,7 +31,7 @@ public class RecruitService {
     }
 
     /**
-     * 根据id查询招聘岗位
+     * 根据id查询推荐岗位
      *
      * @param id
      * @return
@@ -41,7 +41,7 @@ public class RecruitService {
     }
 
     /**
-     * 新增招聘岗位
+     * 新增推荐岗位
      *
      * @param recruit
      */
@@ -51,7 +51,7 @@ public class RecruitService {
     }
 
     /**
-     * 更新招聘岗位
+     * 更新推荐岗位
      *
      * @param recruit
      */
@@ -66,5 +66,25 @@ public class RecruitService {
      */
     public void delete(String id) {
         recruitDao.deleteById(id);
+    }
+
+    /**
+     * 根据状态查询
+     *
+     * @param state 0：关闭 1:开启 2：推荐
+     * @return
+     */
+    public List<Recruit> findTop4ByStateOrderByCreatetimeDesc(String state) {
+        return recruitDao.findTop4ByStateOrderByCreatetimeDesc(state);
+    }
+
+    /**
+     * 最新职位列表
+     * 状态不为0
+     *
+     * @return
+     */
+    public List<Recruit> newlist() {
+        return recruitDao.findTop12ByStateNotOrderByCreatetimeDesc("0");
     }
 }

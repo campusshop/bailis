@@ -1,0 +1,6 @@
+# Project exclude paths
+/bailis_base/target/
+/bailis_common/target/
+/bailis_recruit/target/
+.idea
+.impl
