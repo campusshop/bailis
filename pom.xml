@@ -11,6 +11,8 @@
         <module>bailis_common</module>
         <module>bailis_base</module>
         <module>bailis_recruit</module>
+        <module>bailis_qa</module>
+        <module>bailis_article</module>
     </modules>
     <packaging>pom</packaging>
 
