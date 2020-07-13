@@ -13,6 +13,8 @@
         <module>bailis_recruit</module>
         <module>bailis_qa</module>
         <module>bailis_article</module>
+        <module>bailis_gathering</module>
+        <module>bailis_spit</module>
     </modules>
     <packaging>pom</packaging>
 
